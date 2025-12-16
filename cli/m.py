@@ -6,6 +6,7 @@ from cli.alora.commands import alora_app
 from cli.decompose import app as decompose_app
 from cli.serve.app import serve
 from cli.eval.commands import eval_app
+from cli.agent_blueprint import agent_blueprint_app
 
 cli = typer.Typer(name="m", no_args_is_help=True)
 
@@ -28,3 +29,5 @@ cli.add_typer(alora_app)
 cli.add_typer(decompose_app)
 
 cli.add_typer(eval_app)
+
+cli.add_typer(agent_blueprint_app)
